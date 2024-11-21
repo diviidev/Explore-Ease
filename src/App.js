@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import Login from "./Components/Login";
-import NavBar from "./Components/NavBar";
-import Admin from "./Components/Admin";
-import User from "./Components/User";
+import Home from "./Components/Home";
+
 export default function App() {
   const [isLogged, setIsLogged] = useState(false);
 
@@ -13,10 +12,12 @@ export default function App() {
 
   return (
     <div>
-      {/* <Login isLogged={isLogged} handleLogin={handleLogin} />
-      <NavBar /> */}
-      {/* <Admin /> */}
-      <User />
+      {/* Show Login component if not logged in, else show Home */}
+      {!isLogged ? (
+        <Login isLogged={isLogged} handleLogin={handleLogin} />
+      ) : (
+        <Home /> // Home component will contain the NavBar and other elements
+      )}
     </div>
   );
 }

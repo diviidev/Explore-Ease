@@ -1,6 +1,13 @@
 import React, { useState, useEffect } from "react";
+import { Navigate, useNavigate } from "react-router-dom";
 
 export default function Login({ isLogged, handleLogin }) {
+  const navigate = useNavigate();
+
+  function display() {
+    navigate("/Home");
+  }
+
   const [showMessage, setShowMessage] = useState(false);
 
   useEffect(() => {
@@ -104,6 +111,9 @@ export default function Login({ isLogged, handleLogin }) {
               <button
                 type="submit"
                 className="w-full py-2 px-4 bg-white text-blue-500 font-medium text-sm rounded-md shadow-sm hover:bg-blue-100 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2"
+                onClick={() => {
+                  display();
+                }}
               >
                 Signup
               </button>
