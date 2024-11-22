@@ -5,6 +5,7 @@ import i4Image from "../Images/i4.jpg";
 import i5Image from "../Images/i5.jpeg";
 import i6Image from "../Images/i6.jpeg";
 import i7Image from "../Images/i7.jpeg";
+import i8Image from "../Images/i8.jpeg";
 
 export default function MainBody() {
   // Sample data for destinations
@@ -38,13 +39,6 @@ export default function MainBody() {
       transportation: "Flight, Tube, Bus",
     },
     {
-      id: 4,
-      name: "London",
-      location: "UK",
-      image: i5Image, // External image URL
-      transportation: "Flight, Tube, Bus",
-    },
-    {
       id: 5,
       name: "Sydney",
       location: "Australia",
@@ -57,6 +51,13 @@ export default function MainBody() {
       location: "UAE",
       image: i7Image, // Replace with actual image URL
       transportation: "Flight, Taxi, Metro",
+    },
+    {
+      id: 7,
+      name: "Agra",
+      location: "India",
+      image: i8Image, // External image URL
+      transportation: "Flight, Subway, Taxi",
     },
   ];
 
